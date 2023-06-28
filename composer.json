@@ -1,0 +1,46 @@
+{
+    "name": "southernins/laravel-weasy",
+    "description": "Weasyprint PDF for Laravel",
+    "license": "MIT",
+    "keywords": [
+        "laravel",
+        "weasyprint",
+        "pdf"
+    ],
+    "authors": [
+        {
+            "name": "Nathan Crews",
+            "email": "ncrews@southerninsurance.net"
+        }
+    ],
+    "require": {
+        "php": ">=7.2",
+        "pontedilana/php-weasyprint": "^1.2"
+    },
+    "require-dev": {
+
+        "phpunit/phpunit": "^8.0",
+        "orchestra/testbench": "4.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "SouthernIns\\LaravelWeasy\\": "src/",
+            "SouthernIns\\LaravelWeasy\\Tests\\": "tests/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "SouthernIns\\LaravelWeasy\\ServiceProvider"
+            ],
+            "aliases": {
+                "PDF": "SouthernIns\\LaravelWeasy\\Facades\\WeasyPdf"
+            }
+        }
+    },
+    "scripts": {
+        "test": "phpunit"
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}
