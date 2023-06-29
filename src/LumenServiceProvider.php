@@ -33,7 +33,7 @@ class LumenServiceProvider extends BaseServiceProvider
                 $env = $app['config']->get('weasy.pdf.env', array());
                 $timeout = $app['config']->get('weasy.pdf.timeout', false);
 
-                $weasy = new IlluminateSnappyPdf($app['files'], $binary, $options, $env);
+                $weasy = new LaravelWeasyPPdf($app['files'], $binary, $options, $env);
                 if (false !== $timeout) {
                     $weasy->setTimeout($timeout);
                 }
